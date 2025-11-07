@@ -9,6 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
 .linktree-card {
@@ -16,10 +17,25 @@ body {
   backdrop-filter: blur(10px);
   border-radius: 1.5rem;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  max-width: 400px;
+  max-width: 800px;
   width: 100%;
   padding: 2rem;
   text-align: center;
+  margin: 1rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #455360;
+  color: #d7dedc;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem;
+  transition: all 0.2s ease;
 }
 
 .avatar {
@@ -33,6 +49,12 @@ body {
 .bio {
   color: #b87333;
   font-size: 0.9rem;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
 }
 
 .btn-linktree {
@@ -59,4 +81,44 @@ footer {
   margin-top: 1rem;
   font-size: 0.8rem;
   color: #b87333;
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+  }
+  
+  .linktree-card {
+    max-width: calc(100% - 3rem);
+    padding: 1.5rem;
+    margin: 0.5rem;
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .bio {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .linktree-card {
+    max-width: calc(100% - 2rem);
+    padding: 1.25rem;
+    border-radius: 1rem;
+  }
+  
+  .avatar {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .btn-linktree {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
 }
